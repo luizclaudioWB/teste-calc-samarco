@@ -1,6 +1,2070 @@
 {
     "data": {
         "calcularMotorCompleto": {
+            "producaoTms": [
+                {
+                    "area": "Filtragem Germano (Arenoso)",
+                    "mes": "Jan",
+                    "valor": 1059068.4797126101
+                },
+                {
+                    "area": "Filtragem Germano (Arenoso)",
+                    "mes": "Fev",
+                    "valor": 1021032.04582921
+                },
+                {
+                    "area": "Filtragem Germano (Arenoso)",
+                    "mes": "Mar",
+                    "valor": 1004454.70121026
+                },
+                {
+                    "area": "Filtragem Germano (Arenoso)",
+                    "mes": "Abr",
+                    "valor": 1119819.98267452
+                },
+                {
+                    "area": "Filtragem Germano (Arenoso)",
+                    "mes": "Mai",
+                    "valor": 1137351.68489642
+                },
+                {
+                    "area": "Filtragem Germano (Arenoso)",
+                    "mes": "Jun",
+                    "valor": 1148227.9286748902
+                },
+                {
+                    "area": "Filtragem Germano (Arenoso)",
+                    "mes": "Jul",
+                    "valor": 1188571.77810075
+                },
+                {
+                    "area": "Filtragem Germano (Arenoso)",
+                    "mes": "Ago",
+                    "valor": 1138511.30682527
+                },
+                {
+                    "area": "Filtragem Germano (Arenoso)",
+                    "mes": "Set",
+                    "valor": 1149782.9779954099
+                },
+                {
+                    "area": "Filtragem Germano (Arenoso)",
+                    "mes": "Out",
+                    "valor": 1159533.92468453
+                },
+                {
+                    "area": "Filtragem Germano (Arenoso)",
+                    "mes": "Nov",
+                    "valor": 1051463.39092688
+                },
+                {
+                    "area": "Filtragem Germano (Arenoso)",
+                    "mes": "Dez",
+                    "valor": 1120482.7388095
+                },
+                {
+                    "area": "Beneficiamento Usina 1",
+                    "mes": "Jan",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento Usina 1",
+                    "mes": "Fev",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento Usina 1",
+                    "mes": "Mar",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento Usina 1",
+                    "mes": "Abr",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento Usina 1",
+                    "mes": "Mai",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento Usina 1",
+                    "mes": "Jun",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento Usina 1",
+                    "mes": "Jul",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento Usina 1",
+                    "mes": "Ago",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento Usina 1",
+                    "mes": "Set",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento Usina 1",
+                    "mes": "Out",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento Usina 1",
+                    "mes": "Nov",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento Usina 1",
+                    "mes": "Dez",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento Usina 2",
+                    "mes": "Jan",
+                    "valor": 599777.013988936
+                },
+                {
+                    "area": "Beneficiamento Usina 2",
+                    "mes": "Fev",
+                    "valor": 546473.046337862
+                },
+                {
+                    "area": "Beneficiamento Usina 2",
+                    "mes": "Mar",
+                    "valor": 576603.593494139
+                },
+                {
+                    "area": "Beneficiamento Usina 2",
+                    "mes": "Abr",
+                    "valor": 565607.409838606
+                },
+                {
+                    "area": "Beneficiamento Usina 2",
+                    "mes": "Mai",
+                    "valor": 584428.484154006
+                },
+                {
+                    "area": "Beneficiamento Usina 2",
+                    "mes": "Jun",
+                    "valor": 619565.2631540351
+                },
+                {
+                    "area": "Beneficiamento Usina 2",
+                    "mes": "Jul",
+                    "valor": 641889.6331673289
+                },
+                {
+                    "area": "Beneficiamento Usina 2",
+                    "mes": "Ago",
+                    "valor": 641702.192323429
+                },
+                {
+                    "area": "Beneficiamento Usina 2",
+                    "mes": "Set",
+                    "valor": 624349.0803859191
+                },
+                {
+                    "area": "Beneficiamento Usina 2",
+                    "mes": "Out",
+                    "valor": 611983.339353751
+                },
+                {
+                    "area": "Beneficiamento Usina 2",
+                    "mes": "Nov",
+                    "valor": 525623.556525034
+                },
+                {
+                    "area": "Beneficiamento Usina 2",
+                    "mes": "Dez",
+                    "valor": 585605.841592393
+                },
+                {
+                    "area": "Beneficiamento Usina 3",
+                    "mes": "Jan",
+                    "valor": 660813.394924345
+                },
+                {
+                    "area": "Beneficiamento Usina 3",
+                    "mes": "Fev",
+                    "valor": 683621.8453129049
+                },
+                {
+                    "area": "Beneficiamento Usina 3",
+                    "mes": "Mar",
+                    "valor": 680473.946502607
+                },
+                {
+                    "area": "Beneficiamento Usina 3",
+                    "mes": "Abr",
+                    "valor": 806838.557088322
+                },
+                {
+                    "area": "Beneficiamento Usina 3",
+                    "mes": "Mai",
+                    "valor": 828463.2735669999
+                },
+                {
+                    "area": "Beneficiamento Usina 3",
+                    "mes": "Jun",
+                    "valor": 802192.5348498119
+                },
+                {
+                    "area": "Beneficiamento Usina 3",
+                    "mes": "Jul",
+                    "valor": 822426.587661967
+                },
+                {
+                    "area": "Beneficiamento Usina 3",
+                    "mes": "Ago",
+                    "valor": 751434.925464488
+                },
+                {
+                    "area": "Beneficiamento Usina 3",
+                    "mes": "Set",
+                    "valor": 793452.7548282901
+                },
+                {
+                    "area": "Beneficiamento Usina 3",
+                    "mes": "Out",
+                    "valor": 794818.491112382
+                },
+                {
+                    "area": "Beneficiamento Usina 3",
+                    "mes": "Nov",
+                    "valor": 734242.5186755209
+                },
+                {
+                    "area": "Beneficiamento Usina 3",
+                    "mes": "Dez",
+                    "valor": 726840.2629772341
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Jan",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Fev",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Mar",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Abr",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Mai",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Jun",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Jul",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Ago",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Set",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Out",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Nov",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Dez",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Jan",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Fev",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Mar",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Abr",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Mai",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Jun",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Jul",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Ago",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Set",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Out",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Nov",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Dez",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Jan",
+                    "valor": 1260590.40891328
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Fev",
+                    "valor": 1230094.89165077
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Mar",
+                    "valor": 1257077.53999674
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Abr",
+                    "valor": 1372445.96692693
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Mai",
+                    "valor": 1412891.75772101
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Jun",
+                    "valor": 1421757.79800385
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Jul",
+                    "valor": 1464316.2208293
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Ago",
+                    "valor": 1393137.11778792
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Set",
+                    "valor": 1417801.83521421
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Out",
+                    "valor": 1406801.83046613
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Nov",
+                    "valor": 1259866.07520055
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Dez",
+                    "valor": 1312446.10456963
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Jan",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Fev",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Mar",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Abr",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Mai",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Jun",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Jul",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Ago",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Set",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Out",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Nov",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Dez",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Jan",
+                    "valor": 1260590.40891328
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Fev",
+                    "valor": 1230094.89165077
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Mar",
+                    "valor": 1257077.53999675
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Abr",
+                    "valor": 1372445.96692693
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Mai",
+                    "valor": 1412891.75772101
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Jun",
+                    "valor": 1421757.79800385
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Jul",
+                    "valor": 1464316.2208293
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Ago",
+                    "valor": 1393137.11778792
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Set",
+                    "valor": 1417801.83521421
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Out",
+                    "valor": 1406801.83046613
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Nov",
+                    "valor": 1259866.07520055
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Dez",
+                    "valor": 1312446.10456963
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Jan",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Fev",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Mar",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Abr",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Mai",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Jun",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Jul",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Ago",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Set",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Out",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Nov",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Dez",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Jan",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Fev",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Mar",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Abr",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Mai",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Jun",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Jul",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Ago",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Set",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Out",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Nov",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Dez",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Jan",
+                    "valor": 474390.89440342004
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Fev",
+                    "valor": 457319.946441967
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Mar",
+                    "valor": 385051.64929915796
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Abr",
+                    "valor": 522009.763930424
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Mai",
+                    "valor": 527210.938538106
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Jun",
+                    "valor": 532467.78232443
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Jul",
+                    "valor": 560315.955250413
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Ago",
+                    "valor": 527285.440406607
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Set",
+                    "valor": 523743.97863701405
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Out",
+                    "valor": 536104.513516067
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Nov",
+                    "valor": 471719.741525447
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Dez",
+                    "valor": 488464.12951789
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Jan",
+                    "valor": 592837.543225209
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Fev",
+                    "valor": 551331.095874749
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Mar",
+                    "valor": 678843.054873898
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Abr",
+                    "valor": 651574.1513953139
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Mai",
+                    "valor": 637681.27231241
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Jun",
+                    "valor": 687994.772363659
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Jul",
+                    "valor": 700108.892389257
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Ago",
+                    "valor": 636354.8537487299
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Set",
+                    "valor": 675250.698377472
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Out",
+                    "valor": 669787.796999254
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Nov",
+                    "valor": 565428.3974810559
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Dez",
+                    "valor": 628825.573757082
+                },
+                {
+                    "area": "Vendas",
+                    "mes": "Jan",
+                    "valor": 1067228.43762863
+                },
+                {
+                    "area": "Vendas",
+                    "mes": "Fev",
+                    "valor": 1008651.04231672
+                },
+                {
+                    "area": "Vendas",
+                    "mes": "Mar",
+                    "valor": 1063894.7041730601
+                },
+                {
+                    "area": "Vendas",
+                    "mes": "Abr",
+                    "valor": 1173583.9153257401
+                },
+                {
+                    "area": "Vendas",
+                    "mes": "Mai",
+                    "valor": 1164892.21085052
+                },
+                {
+                    "area": "Vendas",
+                    "mes": "Jun",
+                    "valor": 1220462.55468809
+                },
+                {
+                    "area": "Vendas",
+                    "mes": "Jul",
+                    "valor": 1260424.84763967
+                },
+                {
+                    "area": "Vendas",
+                    "mes": "Ago",
+                    "valor": 1163640.29415534
+                },
+                {
+                    "area": "Vendas",
+                    "mes": "Set",
+                    "valor": 1198994.67701449
+                },
+                {
+                    "area": "Vendas",
+                    "mes": "Out",
+                    "valor": 1205892.3105153202
+                },
+                {
+                    "area": "Vendas",
+                    "mes": "Nov",
+                    "valor": 1037148.1390065
+                },
+                {
+                    "area": "Vendas",
+                    "mes": "Dez",
+                    "valor": 1117289.70327497
+                },
+                {
+                    "area": "Produ\u00e7\u00e3o PSC + PSM",
+                    "mes": "Jan",
+                    "valor": 143855.055938658
+                },
+                {
+                    "area": "Produ\u00e7\u00e3o PSC + PSM",
+                    "mes": "Fev",
+                    "valor": 174652.85938085002
+                },
+                {
+                    "area": "Produ\u00e7\u00e3o PSC + PSM",
+                    "mes": "Mar",
+                    "valor": 143825.05233755798
+                },
+                {
+                    "area": "Produ\u00e7\u00e3o PSC + PSM",
+                    "mes": "Abr",
+                    "valor": 144812.255237932
+                },
+                {
+                    "area": "Produ\u00e7\u00e3o PSC + PSM",
+                    "mes": "Mai",
+                    "valor": 193959.029897655
+                },
+                {
+                    "area": "Produ\u00e7\u00e3o PSC + PSM",
+                    "mes": "Jun",
+                    "valor": 145234.162992193
+                },
+                {
+                    "area": "Produ\u00e7\u00e3o PSC + PSM",
+                    "mes": "Jul",
+                    "valor": 145593.823628757
+                },
+                {
+                    "area": "Produ\u00e7\u00e3o PSC + PSM",
+                    "mes": "Ago",
+                    "valor": 176047.762647398
+                },
+                {
+                    "area": "Produ\u00e7\u00e3o PSC + PSM",
+                    "mes": "Set",
+                    "valor": 162940.95209313
+                },
+                {
+                    "area": "Produ\u00e7\u00e3o PSC + PSM",
+                    "mes": "Out",
+                    "valor": 145103.03079463798
+                },
+                {
+                    "area": "Produ\u00e7\u00e3o PSC + PSM",
+                    "mes": "Nov",
+                    "valor": 174909.333251059
+                },
+                {
+                    "area": "Produ\u00e7\u00e3o PSC + PSM",
+                    "mes": "Dez",
+                    "valor": 144305.607329475
+                },
+                {
+                    "area": "Pellet Feed (embarque)",
+                    "mes": "Jan",
+                    "valor": 385926.883
+                },
+                {
+                    "area": "Pellet Feed (embarque)",
+                    "mes": "Fev",
+                    "valor": 385926.883
+                },
+                {
+                    "area": "Pellet Feed (embarque)",
+                    "mes": "Mar",
+                    "valor": 385926.883
+                },
+                {
+                    "area": "Pellet Feed (embarque)",
+                    "mes": "Abr",
+                    "valor": 385926.883
+                },
+                {
+                    "area": "Pellet Feed (embarque)",
+                    "mes": "Mai",
+                    "valor": 385926.883
+                },
+                {
+                    "area": "Pellet Feed (embarque)",
+                    "mes": "Jun",
+                    "valor": 385926.883
+                },
+                {
+                    "area": "Pellet Feed (embarque)",
+                    "mes": "Jul",
+                    "valor": 385926.883
+                },
+                {
+                    "area": "Pellet Feed (embarque)",
+                    "mes": "Ago",
+                    "valor": 385926.883
+                },
+                {
+                    "area": "Pellet Feed (embarque)",
+                    "mes": "Set",
+                    "valor": 385926.883
+                },
+                {
+                    "area": "Pellet Feed (embarque)",
+                    "mes": "Out",
+                    "valor": 385926.883
+                },
+                {
+                    "area": "Pellet Feed (embarque)",
+                    "mes": "Nov",
+                    "valor": 385926.883
+                },
+                {
+                    "area": "Pellet Feed (embarque)",
+                    "mes": "Dez",
+                    "valor": 385926.883
+                }
+            ],
+            "producaoPelotas": [
+                {
+                    "mes": "Jan",
+                    "valor": 1067228.4376286292
+                },
+                {
+                    "mes": "Fev",
+                    "valor": 1008651.0423167159
+                },
+                {
+                    "mes": "Mar",
+                    "valor": 1063894.704173056
+                },
+                {
+                    "mes": "Abr",
+                    "valor": 1173583.915325738
+                },
+                {
+                    "mes": "Mai",
+                    "valor": 1164892.2108505159
+                },
+                {
+                    "mes": "Jun",
+                    "valor": 1220462.554688089
+                },
+                {
+                    "mes": "Jul",
+                    "valor": 1260424.8476396701
+                },
+                {
+                    "mes": "Ago",
+                    "valor": 1163640.294155337
+                },
+                {
+                    "mes": "Set",
+                    "valor": 1198994.677014486
+                },
+                {
+                    "mes": "Out",
+                    "valor": 1205892.3105153209
+                },
+                {
+                    "mes": "Nov",
+                    "valor": 1037148.1390065029
+                },
+                {
+                    "mes": "Dez",
+                    "valor": 1117289.703274972
+                }
+            ],
+            "producaoPelletFeed": [
+                {
+                    "mes": "Jan",
+                    "valor": 385926.883
+                },
+                {
+                    "mes": "Fev",
+                    "valor": 385926.883
+                },
+                {
+                    "mes": "Mar",
+                    "valor": 385926.883
+                },
+                {
+                    "mes": "Abr",
+                    "valor": 385926.883
+                },
+                {
+                    "mes": "Mai",
+                    "valor": 385926.883
+                },
+                {
+                    "mes": "Jun",
+                    "valor": 385926.883
+                },
+                {
+                    "mes": "Jul",
+                    "valor": 385926.883
+                },
+                {
+                    "mes": "Ago",
+                    "valor": 385926.883
+                },
+                {
+                    "mes": "Set",
+                    "valor": 385926.883
+                },
+                {
+                    "mes": "Out",
+                    "valor": 385926.883
+                },
+                {
+                    "mes": "Nov",
+                    "valor": 385926.883
+                },
+                {
+                    "mes": "Dez",
+                    "valor": 385926.883
+                }
+            ],
+            "producaoPSC": [
+                {
+                    "mes": "Jan",
+                    "valor": 143855.055938658
+                },
+                {
+                    "mes": "Fev",
+                    "valor": 174652.85938085002
+                },
+                {
+                    "mes": "Mar",
+                    "valor": 143825.05233755798
+                },
+                {
+                    "mes": "Abr",
+                    "valor": 144812.255237932
+                },
+                {
+                    "mes": "Mai",
+                    "valor": 193959.029897655
+                },
+                {
+                    "mes": "Jun",
+                    "valor": 145234.162992193
+                },
+                {
+                    "mes": "Jul",
+                    "valor": 145593.823628757
+                },
+                {
+                    "mes": "Ago",
+                    "valor": 176047.762647398
+                },
+                {
+                    "mes": "Set",
+                    "valor": 162940.95209313
+                },
+                {
+                    "mes": "Out",
+                    "valor": 145103.03079463798
+                },
+                {
+                    "mes": "Nov",
+                    "valor": 174909.333251059
+                },
+                {
+                    "mes": "Dez",
+                    "valor": 144305.607329475
+                }
+            ],
+            "producaoPSM": [
+                {
+                    "mes": "Jan",
+                    "valor": 0.0
+                },
+                {
+                    "mes": "Fev",
+                    "valor": 0.0
+                },
+                {
+                    "mes": "Mar",
+                    "valor": 0.0
+                },
+                {
+                    "mes": "Abr",
+                    "valor": 0.0
+                },
+                {
+                    "mes": "Mai",
+                    "valor": 0.0
+                },
+                {
+                    "mes": "Jun",
+                    "valor": 0.0
+                },
+                {
+                    "mes": "Jul",
+                    "valor": 0.0
+                },
+                {
+                    "mes": "Ago",
+                    "valor": 0.0
+                },
+                {
+                    "mes": "Set",
+                    "valor": 0.0
+                },
+                {
+                    "mes": "Out",
+                    "valor": 0.0
+                },
+                {
+                    "mes": "Nov",
+                    "valor": 0.0
+                },
+                {
+                    "mes": "Dez",
+                    "valor": 0.0
+                }
+            ],
+            "consumoEspecificoKWhTms": [
+                {
+                    "area": "Filtragem Germano",
+                    "mes": "Jan",
+                    "valor": 3.27822183223059
+                },
+                {
+                    "area": "Filtragem Germano",
+                    "mes": "Fev",
+                    "valor": 3.35949285542862
+                },
+                {
+                    "area": "Filtragem Germano",
+                    "mes": "Mar",
+                    "valor": 3.28738273377368
+                },
+                {
+                    "area": "Filtragem Germano",
+                    "mes": "Abr",
+                    "valor": 3.01104385861773
+                },
+                {
+                    "area": "Filtragem Germano",
+                    "mes": "Mai",
+                    "valor": 2.92484896837796
+                },
+                {
+                    "area": "Filtragem Germano",
+                    "mes": "Jun",
+                    "valor": 2.90660969526739
+                },
+                {
+                    "area": "Filtragem Germano",
+                    "mes": "Jul",
+                    "valor": 2.82213291174198
+                },
+                {
+                    "area": "Filtragem Germano",
+                    "mes": "Ago",
+                    "valor": 2.9663232335391
+                },
+                {
+                    "area": "Filtragem Germano",
+                    "mes": "Set",
+                    "valor": 2.91471974246362
+                },
+                {
+                    "area": "Filtragem Germano",
+                    "mes": "Out",
+                    "valor": 2.93751039450292
+                },
+                {
+                    "area": "Filtragem Germano",
+                    "mes": "Nov",
+                    "valor": 3.28010657747266
+                },
+                {
+                    "area": "Filtragem Germano",
+                    "mes": "Dez",
+                    "valor": 3.14869691457168
+                },
+                {
+                    "area": "Minera\u00e7\u00e3o",
+                    "mes": "Jan",
+                    "valor": 1.48408897482972
+                },
+                {
+                    "area": "Minera\u00e7\u00e3o",
+                    "mes": "Fev",
+                    "valor": 1.37425160040094
+                },
+                {
+                    "area": "Minera\u00e7\u00e3o",
+                    "mes": "Mar",
+                    "valor": 1.48881161277667
+                },
+                {
+                    "area": "Minera\u00e7\u00e3o",
+                    "mes": "Abr",
+                    "valor": 1.3200198889732
+                },
+                {
+                    "area": "Minera\u00e7\u00e3o",
+                    "mes": "Mai",
+                    "valor": 1.32444175319198
+                },
+                {
+                    "area": "Minera\u00e7\u00e3o",
+                    "mes": "Jun",
+                    "valor": 1.27360568753251
+                },
+                {
+                    "area": "Minera\u00e7\u00e3o",
+                    "mes": "Jul",
+                    "valor": 1.27830341342915
+                },
+                {
+                    "area": "Minera\u00e7\u00e3o",
+                    "mes": "Ago",
+                    "valor": 1.3434574280404
+                },
+                {
+                    "area": "Minera\u00e7\u00e3o",
+                    "mes": "Set",
+                    "valor": 1.2771983693027
+                },
+                {
+                    "area": "Minera\u00e7\u00e3o",
+                    "mes": "Out",
+                    "valor": 1.33008969243801
+                },
+                {
+                    "area": "Minera\u00e7\u00e3o",
+                    "mes": "Nov",
+                    "valor": 1.43735499021526
+                },
+                {
+                    "area": "Minera\u00e7\u00e3o",
+                    "mes": "Dez",
+                    "valor": 1.42639954059472
+                },
+                {
+                    "area": "Beneficiamento 1",
+                    "mes": "Jan",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento 1",
+                    "mes": "Fev",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento 1",
+                    "mes": "Mar",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento 1",
+                    "mes": "Abr",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento 1",
+                    "mes": "Mai",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento 1",
+                    "mes": "Jun",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento 1",
+                    "mes": "Jul",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento 1",
+                    "mes": "Ago",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento 1",
+                    "mes": "Set",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento 1",
+                    "mes": "Out",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento 1",
+                    "mes": "Nov",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento 1",
+                    "mes": "Dez",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Beneficiamento 2",
+                    "mes": "Jan",
+                    "valor": 42.3959899378023
+                },
+                {
+                    "area": "Beneficiamento 2",
+                    "mes": "Fev",
+                    "valor": 46.5313713464997
+                },
+                {
+                    "area": "Beneficiamento 2",
+                    "mes": "Mar",
+                    "valor": 44.0998643381824
+                },
+                {
+                    "area": "Beneficiamento 2",
+                    "mes": "Abr",
+                    "valor": 44.9572261743456
+                },
+                {
+                    "area": "Beneficiamento 2",
+                    "mes": "Mai",
+                    "valor": 43.5094129383661
+                },
+                {
+                    "area": "Beneficiamento 2",
+                    "mes": "Jun",
+                    "valor": 41.0419075474832
+                },
+                {
+                    "area": "Beneficiamento 2",
+                    "mes": "Jul",
+                    "valor": 39.6145052608621
+                },
+                {
+                    "area": "Beneficiamento 2",
+                    "mes": "Ago",
+                    "valor": 39.6260766352249
+                },
+                {
+                    "area": "Beneficiamento 2",
+                    "mes": "Set",
+                    "valor": 40.7274408641437
+                },
+                {
+                    "area": "Beneficiamento 2",
+                    "mes": "Out",
+                    "valor": 41.5503799120608
+                },
+                {
+                    "area": "Beneficiamento 2",
+                    "mes": "Nov",
+                    "valor": 48.3770940901294
+                },
+                {
+                    "area": "Beneficiamento 2",
+                    "mes": "Dez",
+                    "valor": 43.4219374944335
+                },
+                {
+                    "area": "Beneficiamento 3",
+                    "mes": "Jan",
+                    "valor": 42.2150234604106
+                },
+                {
+                    "area": "Beneficiamento 3",
+                    "mes": "Fev",
+                    "valor": 40.806505862642
+                },
+                {
+                    "area": "Beneficiamento 3",
+                    "mes": "Mar",
+                    "valor": 40.9953078527963
+                },
+                {
+                    "area": "Beneficiamento 3",
+                    "mes": "Abr",
+                    "valor": 34.5746867413553
+                },
+                {
+                    "area": "Beneficiamento 3",
+                    "mes": "Mai",
+                    "valor": 33.6722888155648
+                },
+                {
+                    "area": "Beneficiamento 3",
+                    "mes": "Jun",
+                    "valor": 34.7750115379116
+                },
+                {
+                    "area": "Beneficiamento 3",
+                    "mes": "Jul",
+                    "valor": 33.9193978843703
+                },
+                {
+                    "area": "Beneficiamento 3",
+                    "mes": "Ago",
+                    "valor": 37.1240086291001
+                },
+                {
+                    "area": "Beneficiamento 3",
+                    "mes": "Set",
+                    "valor": 35.1579607651764
+                },
+                {
+                    "area": "Beneficiamento 3",
+                    "mes": "Out",
+                    "valor": 35.0975576637741
+                },
+                {
+                    "area": "Beneficiamento 3",
+                    "mes": "Nov",
+                    "valor": 37.9932416766367
+                },
+                {
+                    "area": "Beneficiamento 3",
+                    "mes": "Dez",
+                    "valor": 38.3800576637442
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Jan",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Fev",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Mar",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Abr",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Mai",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Jun",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Jul",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Ago",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Set",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Out",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Nov",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 1",
+                    "mes": "Dez",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Jan",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Fev",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Mar",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Abr",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Mai",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Jun",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Jul",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Ago",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Set",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Out",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Nov",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 2",
+                    "mes": "Dez",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Jan",
+                    "valor": 7.10512647714471
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Fev",
+                    "valor": 7.19228825927993
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Mar",
+                    "valor": 7.55856866424988
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Abr",
+                    "valor": 7.10512647714471
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Mai",
+                    "valor": 7.05788485082513
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Jun",
+                    "valor": 7.1973399764735
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Jul",
+                    "valor": 7.12678854398574
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Ago",
+                    "valor": 7.18073747513508
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Set",
+                    "valor": 7.10512647714471
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Out",
+                    "valor": 7.18073747513508
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Nov",
+                    "valor": 7.14285714285714
+                },
+                {
+                    "area": "Mineroduto 3",
+                    "mes": "Dez",
+                    "valor": 7.18073747513508
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Jan",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Fev",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Mar",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Abr",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Mai",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Jun",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Jul",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Ago",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Set",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Out",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Nov",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 1",
+                    "mes": "Dez",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Jan",
+                    "valor": 10.77
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Fev",
+                    "valor": 10.77
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Mar",
+                    "valor": 10.77
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Abr",
+                    "valor": 10.77
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Mai",
+                    "valor": 10.77
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Jun",
+                    "valor": 10.77
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Jul",
+                    "valor": 10.77
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Ago",
+                    "valor": 10.77
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Set",
+                    "valor": 10.77
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Out",
+                    "valor": 10.77
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Nov",
+                    "valor": 10.77
+                },
+                {
+                    "area": "Prepara\u00e7\u00e3o 2",
+                    "mes": "Dez",
+                    "valor": 10.77
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Jan",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Fev",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Mar",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Abr",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Mai",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Jun",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Jul",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Ago",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Set",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Out",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Nov",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 1",
+                    "mes": "Dez",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Jan",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Fev",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Mar",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Abr",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Mai",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Jun",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Jul",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Ago",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Set",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Out",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Nov",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 2",
+                    "mes": "Dez",
+                    "valor": 0.0
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Jan",
+                    "valor": 29.95
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Fev",
+                    "valor": 29.95
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Mar",
+                    "valor": 29.95
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Abr",
+                    "valor": 29.95
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Mai",
+                    "valor": 29.95
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Jun",
+                    "valor": 29.95
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Jul",
+                    "valor": 29.95
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Ago",
+                    "valor": 29.95
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Set",
+                    "valor": 29.95
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Out",
+                    "valor": 29.95
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Nov",
+                    "valor": 29.95
+                },
+                {
+                    "area": "Usina 3",
+                    "mes": "Dez",
+                    "valor": 29.95
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Jan",
+                    "valor": 32.17
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Fev",
+                    "valor": 32.17
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Mar",
+                    "valor": 32.17
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Abr",
+                    "valor": 32.17
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Mai",
+                    "valor": 32.17
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Jun",
+                    "valor": 32.17
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Jul",
+                    "valor": 32.17
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Ago",
+                    "valor": 32.17
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Set",
+                    "valor": 32.17
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Out",
+                    "valor": 32.17
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Nov",
+                    "valor": 32.17
+                },
+                {
+                    "area": "Usina 4",
+                    "mes": "Dez",
+                    "valor": 32.17
+                },
+                {
+                    "area": "Estocagem",
+                    "mes": "Jan",
+                    "valor": 0.868773527622028
+                },
+                {
+                    "area": "Estocagem",
+                    "mes": "Fev",
+                    "valor": 0.868773527622028
+                },
+                {
+                    "area": "Estocagem",
+                    "mes": "Mar",
+                    "valor": 0.868773527622028
+                },
+                {
+                    "area": "Estocagem",
+                    "mes": "Abr",
+                    "valor": 0.868773527622028
+                },
+                {
+                    "area": "Estocagem",
+                    "mes": "Mai",
+                    "valor": 0.868773527622028
+                },
+                {
+                    "area": "Estocagem",
+                    "mes": "Jun",
+                    "valor": 0.868773527622028
+                },
+                {
+                    "area": "Estocagem",
+                    "mes": "Jul",
+                    "valor": 0.868773527622028
+                },
+                {
+                    "area": "Estocagem",
+                    "mes": "Ago",
+                    "valor": 0.868773527622028
+                },
+                {
+                    "area": "Estocagem",
+                    "mes": "Set",
+                    "valor": 0.868773527622028
+                },
+                {
+                    "area": "Estocagem",
+                    "mes": "Out",
+                    "valor": 0.868773527622028
+                },
+                {
+                    "area": "Estocagem",
+                    "mes": "Nov",
+                    "valor": 0.868773527622028
+                },
+                {
+                    "area": "Estocagem",
+                    "mes": "Dez",
+                    "valor": 0.868773527622028
+                }
+            ],
             "consumoAreaTotalMWh": [
                 {
                     "mes": "Jan",
@@ -1997,968 +4061,6 @@
                 {
                     "mes": "Dez",
                     "valor": 22547966.985533208
-                }
-            ],
-            "producaoTms": [
-                {
-                    "area": "Filtragem Germano (Arenoso)",
-                    "mes": "Jan",
-                    "valor": 1059068.4797126101
-                },
-                {
-                    "area": "Filtragem Germano (Arenoso)",
-                    "mes": "Fev",
-                    "valor": 1021032.04582921
-                },
-                {
-                    "area": "Filtragem Germano (Arenoso)",
-                    "mes": "Mar",
-                    "valor": 1004454.70121026
-                },
-                {
-                    "area": "Filtragem Germano (Arenoso)",
-                    "mes": "Abr",
-                    "valor": 1119819.98267452
-                },
-                {
-                    "area": "Filtragem Germano (Arenoso)",
-                    "mes": "Mai",
-                    "valor": 1137351.68489642
-                },
-                {
-                    "area": "Filtragem Germano (Arenoso)",
-                    "mes": "Jun",
-                    "valor": 1148227.9286748902
-                },
-                {
-                    "area": "Filtragem Germano (Arenoso)",
-                    "mes": "Jul",
-                    "valor": 1188571.77810075
-                },
-                {
-                    "area": "Filtragem Germano (Arenoso)",
-                    "mes": "Ago",
-                    "valor": 1138511.30682527
-                },
-                {
-                    "area": "Filtragem Germano (Arenoso)",
-                    "mes": "Set",
-                    "valor": 1149782.9779954099
-                },
-                {
-                    "area": "Filtragem Germano (Arenoso)",
-                    "mes": "Out",
-                    "valor": 1159533.92468453
-                },
-                {
-                    "area": "Filtragem Germano (Arenoso)",
-                    "mes": "Nov",
-                    "valor": 1051463.39092688
-                },
-                {
-                    "area": "Filtragem Germano (Arenoso)",
-                    "mes": "Dez",
-                    "valor": 1120482.7388095
-                },
-                {
-                    "area": "Beneficiamento Usina 1",
-                    "mes": "Jan",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Beneficiamento Usina 1",
-                    "mes": "Fev",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Beneficiamento Usina 1",
-                    "mes": "Mar",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Beneficiamento Usina 1",
-                    "mes": "Abr",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Beneficiamento Usina 1",
-                    "mes": "Mai",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Beneficiamento Usina 1",
-                    "mes": "Jun",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Beneficiamento Usina 1",
-                    "mes": "Jul",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Beneficiamento Usina 1",
-                    "mes": "Ago",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Beneficiamento Usina 1",
-                    "mes": "Set",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Beneficiamento Usina 1",
-                    "mes": "Out",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Beneficiamento Usina 1",
-                    "mes": "Nov",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Beneficiamento Usina 1",
-                    "mes": "Dez",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Beneficiamento Usina 2",
-                    "mes": "Jan",
-                    "valor": 599777.013988936
-                },
-                {
-                    "area": "Beneficiamento Usina 2",
-                    "mes": "Fev",
-                    "valor": 546473.046337862
-                },
-                {
-                    "area": "Beneficiamento Usina 2",
-                    "mes": "Mar",
-                    "valor": 576603.593494139
-                },
-                {
-                    "area": "Beneficiamento Usina 2",
-                    "mes": "Abr",
-                    "valor": 565607.409838606
-                },
-                {
-                    "area": "Beneficiamento Usina 2",
-                    "mes": "Mai",
-                    "valor": 584428.484154006
-                },
-                {
-                    "area": "Beneficiamento Usina 2",
-                    "mes": "Jun",
-                    "valor": 619565.2631540351
-                },
-                {
-                    "area": "Beneficiamento Usina 2",
-                    "mes": "Jul",
-                    "valor": 641889.6331673289
-                },
-                {
-                    "area": "Beneficiamento Usina 2",
-                    "mes": "Ago",
-                    "valor": 641702.192323429
-                },
-                {
-                    "area": "Beneficiamento Usina 2",
-                    "mes": "Set",
-                    "valor": 624349.0803859191
-                },
-                {
-                    "area": "Beneficiamento Usina 2",
-                    "mes": "Out",
-                    "valor": 611983.339353751
-                },
-                {
-                    "area": "Beneficiamento Usina 2",
-                    "mes": "Nov",
-                    "valor": 525623.556525034
-                },
-                {
-                    "area": "Beneficiamento Usina 2",
-                    "mes": "Dez",
-                    "valor": 585605.841592393
-                },
-                {
-                    "area": "Beneficiamento Usina 3",
-                    "mes": "Jan",
-                    "valor": 660813.394924345
-                },
-                {
-                    "area": "Beneficiamento Usina 3",
-                    "mes": "Fev",
-                    "valor": 683621.8453129049
-                },
-                {
-                    "area": "Beneficiamento Usina 3",
-                    "mes": "Mar",
-                    "valor": 680473.946502607
-                },
-                {
-                    "area": "Beneficiamento Usina 3",
-                    "mes": "Abr",
-                    "valor": 806838.557088322
-                },
-                {
-                    "area": "Beneficiamento Usina 3",
-                    "mes": "Mai",
-                    "valor": 828463.2735669999
-                },
-                {
-                    "area": "Beneficiamento Usina 3",
-                    "mes": "Jun",
-                    "valor": 802192.5348498119
-                },
-                {
-                    "area": "Beneficiamento Usina 3",
-                    "mes": "Jul",
-                    "valor": 822426.587661967
-                },
-                {
-                    "area": "Beneficiamento Usina 3",
-                    "mes": "Ago",
-                    "valor": 751434.925464488
-                },
-                {
-                    "area": "Beneficiamento Usina 3",
-                    "mes": "Set",
-                    "valor": 793452.7548282901
-                },
-                {
-                    "area": "Beneficiamento Usina 3",
-                    "mes": "Out",
-                    "valor": 794818.491112382
-                },
-                {
-                    "area": "Beneficiamento Usina 3",
-                    "mes": "Nov",
-                    "valor": 734242.5186755209
-                },
-                {
-                    "area": "Beneficiamento Usina 3",
-                    "mes": "Dez",
-                    "valor": 726840.2629772341
-                },
-                {
-                    "area": "Mineroduto 1",
-                    "mes": "Jan",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 1",
-                    "mes": "Fev",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 1",
-                    "mes": "Mar",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 1",
-                    "mes": "Abr",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 1",
-                    "mes": "Mai",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 1",
-                    "mes": "Jun",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 1",
-                    "mes": "Jul",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 1",
-                    "mes": "Ago",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 1",
-                    "mes": "Set",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 1",
-                    "mes": "Out",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 1",
-                    "mes": "Nov",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 1",
-                    "mes": "Dez",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 2",
-                    "mes": "Jan",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 2",
-                    "mes": "Fev",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 2",
-                    "mes": "Mar",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 2",
-                    "mes": "Abr",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 2",
-                    "mes": "Mai",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 2",
-                    "mes": "Jun",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 2",
-                    "mes": "Jul",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 2",
-                    "mes": "Ago",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 2",
-                    "mes": "Set",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 2",
-                    "mes": "Out",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 2",
-                    "mes": "Nov",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 2",
-                    "mes": "Dez",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Mineroduto 3",
-                    "mes": "Jan",
-                    "valor": 1260590.40891328
-                },
-                {
-                    "area": "Mineroduto 3",
-                    "mes": "Fev",
-                    "valor": 1230094.89165077
-                },
-                {
-                    "area": "Mineroduto 3",
-                    "mes": "Mar",
-                    "valor": 1257077.53999674
-                },
-                {
-                    "area": "Mineroduto 3",
-                    "mes": "Abr",
-                    "valor": 1372445.96692693
-                },
-                {
-                    "area": "Mineroduto 3",
-                    "mes": "Mai",
-                    "valor": 1412891.75772101
-                },
-                {
-                    "area": "Mineroduto 3",
-                    "mes": "Jun",
-                    "valor": 1421757.79800385
-                },
-                {
-                    "area": "Mineroduto 3",
-                    "mes": "Jul",
-                    "valor": 1464316.2208293
-                },
-                {
-                    "area": "Mineroduto 3",
-                    "mes": "Ago",
-                    "valor": 1393137.11778792
-                },
-                {
-                    "area": "Mineroduto 3",
-                    "mes": "Set",
-                    "valor": 1417801.83521421
-                },
-                {
-                    "area": "Mineroduto 3",
-                    "mes": "Out",
-                    "valor": 1406801.83046613
-                },
-                {
-                    "area": "Mineroduto 3",
-                    "mes": "Nov",
-                    "valor": 1259866.07520055
-                },
-                {
-                    "area": "Mineroduto 3",
-                    "mes": "Dez",
-                    "valor": 1312446.10456963
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 1",
-                    "mes": "Jan",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 1",
-                    "mes": "Fev",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 1",
-                    "mes": "Mar",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 1",
-                    "mes": "Abr",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 1",
-                    "mes": "Mai",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 1",
-                    "mes": "Jun",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 1",
-                    "mes": "Jul",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 1",
-                    "mes": "Ago",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 1",
-                    "mes": "Set",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 1",
-                    "mes": "Out",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 1",
-                    "mes": "Nov",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 1",
-                    "mes": "Dez",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 2",
-                    "mes": "Jan",
-                    "valor": 1260590.40891328
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 2",
-                    "mes": "Fev",
-                    "valor": 1230094.89165077
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 2",
-                    "mes": "Mar",
-                    "valor": 1257077.53999675
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 2",
-                    "mes": "Abr",
-                    "valor": 1372445.96692693
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 2",
-                    "mes": "Mai",
-                    "valor": 1412891.75772101
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 2",
-                    "mes": "Jun",
-                    "valor": 1421757.79800385
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 2",
-                    "mes": "Jul",
-                    "valor": 1464316.2208293
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 2",
-                    "mes": "Ago",
-                    "valor": 1393137.11778792
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 2",
-                    "mes": "Set",
-                    "valor": 1417801.83521421
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 2",
-                    "mes": "Out",
-                    "valor": 1406801.83046613
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 2",
-                    "mes": "Nov",
-                    "valor": 1259866.07520055
-                },
-                {
-                    "area": "Prepara\u00e7\u00e3o 2",
-                    "mes": "Dez",
-                    "valor": 1312446.10456963
-                },
-                {
-                    "area": "Usina 1",
-                    "mes": "Jan",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 1",
-                    "mes": "Fev",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 1",
-                    "mes": "Mar",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 1",
-                    "mes": "Abr",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 1",
-                    "mes": "Mai",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 1",
-                    "mes": "Jun",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 1",
-                    "mes": "Jul",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 1",
-                    "mes": "Ago",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 1",
-                    "mes": "Set",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 1",
-                    "mes": "Out",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 1",
-                    "mes": "Nov",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 1",
-                    "mes": "Dez",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 2",
-                    "mes": "Jan",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 2",
-                    "mes": "Fev",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 2",
-                    "mes": "Mar",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 2",
-                    "mes": "Abr",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 2",
-                    "mes": "Mai",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 2",
-                    "mes": "Jun",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 2",
-                    "mes": "Jul",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 2",
-                    "mes": "Ago",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 2",
-                    "mes": "Set",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 2",
-                    "mes": "Out",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 2",
-                    "mes": "Nov",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 2",
-                    "mes": "Dez",
-                    "valor": 0.0
-                },
-                {
-                    "area": "Usina 3",
-                    "mes": "Jan",
-                    "valor": 474390.89440342004
-                },
-                {
-                    "area": "Usina 3",
-                    "mes": "Fev",
-                    "valor": 457319.946441967
-                },
-                {
-                    "area": "Usina 3",
-                    "mes": "Mar",
-                    "valor": 385051.64929915796
-                },
-                {
-                    "area": "Usina 3",
-                    "mes": "Abr",
-                    "valor": 522009.763930424
-                },
-                {
-                    "area": "Usina 3",
-                    "mes": "Mai",
-                    "valor": 527210.938538106
-                },
-                {
-                    "area": "Usina 3",
-                    "mes": "Jun",
-                    "valor": 532467.78232443
-                },
-                {
-                    "area": "Usina 3",
-                    "mes": "Jul",
-                    "valor": 560315.955250413
-                },
-                {
-                    "area": "Usina 3",
-                    "mes": "Ago",
-                    "valor": 527285.440406607
-                },
-                {
-                    "area": "Usina 3",
-                    "mes": "Set",
-                    "valor": 523743.97863701405
-                },
-                {
-                    "area": "Usina 3",
-                    "mes": "Out",
-                    "valor": 536104.513516067
-                },
-                {
-                    "area": "Usina 3",
-                    "mes": "Nov",
-                    "valor": 471719.741525447
-                },
-                {
-                    "area": "Usina 3",
-                    "mes": "Dez",
-                    "valor": 488464.12951789
-                },
-                {
-                    "area": "Usina 4",
-                    "mes": "Jan",
-                    "valor": 592837.543225209
-                },
-                {
-                    "area": "Usina 4",
-                    "mes": "Fev",
-                    "valor": 551331.095874749
-                },
-                {
-                    "area": "Usina 4",
-                    "mes": "Mar",
-                    "valor": 678843.054873898
-                },
-                {
-                    "area": "Usina 4",
-                    "mes": "Abr",
-                    "valor": 651574.1513953139
-                },
-                {
-                    "area": "Usina 4",
-                    "mes": "Mai",
-                    "valor": 637681.27231241
-                },
-                {
-                    "area": "Usina 4",
-                    "mes": "Jun",
-                    "valor": 687994.772363659
-                },
-                {
-                    "area": "Usina 4",
-                    "mes": "Jul",
-                    "valor": 700108.892389257
-                },
-                {
-                    "area": "Usina 4",
-                    "mes": "Ago",
-                    "valor": 636354.8537487299
-                },
-                {
-                    "area": "Usina 4",
-                    "mes": "Set",
-                    "valor": 675250.698377472
-                },
-                {
-                    "area": "Usina 4",
-                    "mes": "Out",
-                    "valor": 669787.796999254
-                },
-                {
-                    "area": "Usina 4",
-                    "mes": "Nov",
-                    "valor": 565428.3974810559
-                },
-                {
-                    "area": "Usina 4",
-                    "mes": "Dez",
-                    "valor": 628825.573757082
-                },
-                {
-                    "area": "Vendas",
-                    "mes": "Jan",
-                    "valor": 1067228.43762863
-                },
-                {
-                    "area": "Vendas",
-                    "mes": "Fev",
-                    "valor": 1008651.04231672
-                },
-                {
-                    "area": "Vendas",
-                    "mes": "Mar",
-                    "valor": 1063894.7041730601
-                },
-                {
-                    "area": "Vendas",
-                    "mes": "Abr",
-                    "valor": 1173583.9153257401
-                },
-                {
-                    "area": "Vendas",
-                    "mes": "Mai",
-                    "valor": 1164892.21085052
-                },
-                {
-                    "area": "Vendas",
-                    "mes": "Jun",
-                    "valor": 1220462.55468809
-                },
-                {
-                    "area": "Vendas",
-                    "mes": "Jul",
-                    "valor": 1260424.84763967
-                },
-                {
-                    "area": "Vendas",
-                    "mes": "Ago",
-                    "valor": 1163640.29415534
-                },
-                {
-                    "area": "Vendas",
-                    "mes": "Set",
-                    "valor": 1198994.67701449
-                },
-                {
-                    "area": "Vendas",
-                    "mes": "Out",
-                    "valor": 1205892.3105153202
-                },
-                {
-                    "area": "Vendas",
-                    "mes": "Nov",
-                    "valor": 1037148.1390065
-                },
-                {
-                    "area": "Vendas",
-                    "mes": "Dez",
-                    "valor": 1117289.70327497
-                },
-                {
-                    "area": "Produ\u00e7\u00e3o PSC + PSM",
-                    "mes": "Jan",
-                    "valor": 143855.055938658
-                },
-                {
-                    "area": "Produ\u00e7\u00e3o PSC + PSM",
-                    "mes": "Fev",
-                    "valor": 174652.85938085002
-                },
-                {
-                    "area": "Produ\u00e7\u00e3o PSC + PSM",
-                    "mes": "Mar",
-                    "valor": 143825.05233755798
-                },
-                {
-                    "area": "Produ\u00e7\u00e3o PSC + PSM",
-                    "mes": "Abr",
-                    "valor": 144812.255237932
-                },
-                {
-                    "area": "Produ\u00e7\u00e3o PSC + PSM",
-                    "mes": "Mai",
-                    "valor": 193959.029897655
-                },
-                {
-                    "area": "Produ\u00e7\u00e3o PSC + PSM",
-                    "mes": "Jun",
-                    "valor": 145234.162992193
-                },
-                {
-                    "area": "Produ\u00e7\u00e3o PSC + PSM",
-                    "mes": "Jul",
-                    "valor": 145593.823628757
-                },
-                {
-                    "area": "Produ\u00e7\u00e3o PSC + PSM",
-                    "mes": "Ago",
-                    "valor": 176047.762647398
-                },
-                {
-                    "area": "Produ\u00e7\u00e3o PSC + PSM",
-                    "mes": "Set",
-                    "valor": 162940.95209313
-                },
-                {
-                    "area": "Produ\u00e7\u00e3o PSC + PSM",
-                    "mes": "Out",
-                    "valor": 145103.03079463798
-                },
-                {
-                    "area": "Produ\u00e7\u00e3o PSC + PSM",
-                    "mes": "Nov",
-                    "valor": 174909.333251059
-                },
-                {
-                    "area": "Produ\u00e7\u00e3o PSC + PSM",
-                    "mes": "Dez",
-                    "valor": 144305.607329475
-                },
-                {
-                    "area": "Pellet Feed (embarque)",
-                    "mes": "Jan",
-                    "valor": 385926.883
-                },
-                {
-                    "area": "Pellet Feed (embarque)",
-                    "mes": "Fev",
-                    "valor": 385926.883
-                },
-                {
-                    "area": "Pellet Feed (embarque)",
-                    "mes": "Mar",
-                    "valor": 385926.883
-                },
-                {
-                    "area": "Pellet Feed (embarque)",
-                    "mes": "Abr",
-                    "valor": 385926.883
-                },
-                {
-                    "area": "Pellet Feed (embarque)",
-                    "mes": "Mai",
-                    "valor": 385926.883
-                },
-                {
-                    "area": "Pellet Feed (embarque)",
-                    "mes": "Jun",
-                    "valor": 385926.883
-                },
-                {
-                    "area": "Pellet Feed (embarque)",
-                    "mes": "Jul",
-                    "valor": 385926.883
-                },
-                {
-                    "area": "Pellet Feed (embarque)",
-                    "mes": "Ago",
-                    "valor": 385926.883
-                },
-                {
-                    "area": "Pellet Feed (embarque)",
-                    "mes": "Set",
-                    "valor": 385926.883
-                },
-                {
-                    "area": "Pellet Feed (embarque)",
-                    "mes": "Out",
-                    "valor": 385926.883
-                },
-                {
-                    "area": "Pellet Feed (embarque)",
-                    "mes": "Nov",
-                    "valor": 385926.883
-                },
-                {
-                    "area": "Pellet Feed (embarque)",
-                    "mes": "Dez",
-                    "valor": 385926.883
                 }
             ]
         }

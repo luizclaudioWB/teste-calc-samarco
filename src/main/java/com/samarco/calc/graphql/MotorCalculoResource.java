@@ -50,6 +50,18 @@ public class MotorCalculoResource {
         // Cálculo 01 — Produção
         r.producaoTms = toAreaMesValues(resultado.producaoTms());
 
+        // Cálculo 02 — Consumo Específico
+        r.consumoEspecificoKWhTms = toAreaConsumoMesValues(resultado.consumoEspecifico());
+
+        // Produção por tipo (do Resumo Geral)
+        if (resultado.resumoGeral() != null) {
+            var rg = resultado.resumoGeral();
+            r.producaoPelotas = toMesValues(rg.producaoPelotas());
+            r.producaoPelletFeed = toMesValues(rg.producaoPelletFeed());
+            r.producaoPSC = toMesValues(rg.producaoPscPsm());
+            r.producaoPSM = toMesValues(zeroMesMap());
+        }
+
         // Cálculo 03 — Consumo Área
         r.consumoAreaTotalMWh = toMesValues(resultado.consumoArea().totalMWh());
         r.consumoMG_MWh = toMesValues(resultado.consumoArea().consumoMG_MWh());
@@ -129,6 +141,13 @@ public class MotorCalculoResource {
     public static class MotorCalculoResponse {
         // Cálculo 01 — Produção (tms)
         public List<AreaMesValue> producaoTms;
+        public List<MesValue> producaoPelotas;
+        public List<MesValue> producaoPelletFeed;
+        public List<MesValue> producaoPSC;
+        public List<MesValue> producaoPSM;
+
+        // Cálculo 02 — Consumo Específico (kWh/tms)
+        public List<AreaMesValue> consumoEspecificoKWhTms;
 
         // Cálculo 03 — Consumo Área
         public List<MesValue> consumoAreaTotalMWh;
@@ -203,6 +222,26 @@ public class MotorCalculoResource {
     }
 
     // --- Conversores ---
+
+    private List<AreaMesValue> toAreaConsumoMesValues(Map<AreaConsumoEspecifico, Map<Mes, Double>> map) {
+        List<AreaMesValue> result = new ArrayList<>();
+        for (Map.Entry<AreaConsumoEspecifico, Map<Mes, Double>> entry : map.entrySet()) {
+            for (Map.Entry<Mes, Double> mesEntry : entry.getValue().entrySet()) {
+                AreaMesValue v = new AreaMesValue();
+                v.area = entry.getKey().getLabel();
+                v.mes = mesEntry.getKey().getLabel();
+                v.valor = mesEntry.getValue();
+                result.add(v);
+            }
+        }
+        return result;
+    }
+
+    private Map<Mes, Double> zeroMesMap() {
+        Map<Mes, Double> map = new EnumMap<>(Mes.class);
+        for (Mes mes : Mes.values()) map.put(mes, 0.0);
+        return map;
+    }
 
     private List<AreaMesValue> toAreaMesValues(Map<AreaProducao, Map<Mes, Double>> map) {
         List<AreaMesValue> result = new ArrayList<>();
