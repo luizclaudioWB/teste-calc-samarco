@@ -6,7 +6,7 @@ import { ApolloClient, InMemoryCache, HttpLink } from "@apollo/client";
  * Falls back to localhost:8080 for local development.
  */
 export const GRAPHQL_ENDPOINT: string =
-  (import.meta.env?.VITE_GRAPHQL_ENDPOINT as string | undefined) ?? "http://localhost:8080/graphql";
+  (import.meta.env?.VITE_GRAPHQL_ENDPOINT as string | undefined) ?? "/graphql";
 
 const httpLink = new HttpLink({
   uri: GRAPHQL_ENDPOINT,
