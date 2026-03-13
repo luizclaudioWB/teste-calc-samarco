@@ -1,0 +1,652 @@
+## PROMPT PARA MANUS IA — Frontend "Motor de Cálculo Energético SAMARCO"
+
+### CONTEXTO DO PROJETO
+
+Preciso criar um frontend completo em **React + TypeScript + Vite** para o "Motor de Cálculo Energético" da SAMARCO. O backend já existe em Java (Quarkus) e expõe uma API **GraphQL** no endpoint `http://localhost:8080/graphql`. O sistema reproduz cálculos de planejamento energético que antes eram feitos em Excel (~R$ 392M/ano).
+
+O frontend deve:
+1. Visualizar todos os resultados dos **10 cálculos encadeados** (Abas 4, 6, 7, 9, 12, 13, 14, 15, 16)
+2. Permitir validação comparando resultado do frontend vs API (painel verde/vermelho)
+3. Ser moderno, responsivo e profissional — dark theme premium
+
+Os arquivos anexos são:
+- **SAMARCO-PLANILHA-REPLY.xlsx** — planilha Excel original com todas as fórmulas (fonte de verdade)
+- **jsonParaComparacao.json** — retorno real da API GraphQL (JSON com todos os dados calculados)
+
+### STACK TECNOLÓGICA OBRIGATÓRIA
+
+- **React 18+** com **TypeScript**
+- **Vite** como bundler
+- **React Router v6** para roteamento SPA
+- **Apollo Client** para comunicação GraphQL
+- **Ant Design (antd) 5+** — tema dark customizado
+- **Recharts** ou **Apache ECharts** para gráficos
+- **Montserrat** como fonte principal (Google Fonts)
+- **CSS Modules** ou **Styled Components**
+
+### PALETA DE CORES (DESIGN SYSTEM)
+
+```
+--primary-dark: #052851       (azul escuro principal)
+--primary: #004071            (azul médio — cor institucional Samarco)
+--primary-light: #457ba9      (azul claro — destaques)
+--accent: #00D8FF             (ciano brilhante — botões, highlights)
+--background: #0a0e14         (fundo principal)
+--surface: #111922            (cards, painéis)
+--surface-hover: #1a2533      (hover)
+--surface-border: #1e3a5f     (bordas sutis)
+--text-primary: #e8edf2
+--text-secondary: #8a9bb5
+--text-muted: #4a5a72
+--success: #00c853
+--warning: #ffa726
+--danger: #ef5350
+--mg-color: #457ba9           (cor para Minas Gerais)
+--es-color: #00D8FF           (cor para Espírito Santo)
+```
+
+### ESTRUTURA DE PÁGINAS E ROTAS
+
+```
+/                           → Dashboard (visão geral consolidada)
+/producao                   → Cálculo 01 — Produção (tms)
+/consumo-especifico         → Cálculo 02 — Consumo Específico (kWh/tms)
+/consumo-area               → Cálculo 03 — Consumo Área (MWh + distribuição MG/ES)
+/geracao                    → Cálculo 04 — Geração Própria (usinas + calendário)
+/encargos                   → Cálculo 05 — Encargos ESS/EER (R$ por estado)
+/distribuicao-carga         → Cálculo 13 — Distribuição de Carga (MWh por estado)
+/classe-custo               → Cálculo 14 — Classe de Custo (R$ por classe/estado)
+/centro-custos              → Cálculo 15 — Centro de Custos (R$ por CC)
+/resumo-geral               → Cálculo 16 — Resumo Geral (consolidação total)
+/validacao                  → Painel de Validação (frontend vs API)
+```
+
+### ARQUITETURA DE LAYOUT
+
+**1. Header/TopBar (fixo, 64px):**
+- Esquerda: botão hamburger + logo SAMARCO (dois arcos azul/cinza + texto) + "Motor de Cálculo Energético"
+- Direita: badge "Ano Base: 2026" + indicador status API (bolinha verde se conectado, vermelha se offline)
+- Background: `--primary-dark` com glassmorphism sutil
+
+**2. Sidebar (colapsável, 240px aberto / 64px fechado):**
+- Itens com ícone + texto:
+  - 📊 Dashboard
+  - 🏭 Produção
+  - ⚡ Consumo Específico
+  - 📈 Consumo Área
+  - 🔋 Geração Própria
+  - 💰 Encargos ESS/EER
+  - 🔄 Distribuição de Carga *(NOVO)*
+  - 🏷️ Classe de Custo *(NOVO)*
+  - 🏢 Centro de Custos *(NOVO)*
+  - 📋 Resumo Geral *(NOVO)*
+  - ✅ Validação
+- Separador visual entre "Cálculos" e "Validação"
+- Highlight item ativo com faixa lateral accent
+- Ícone de "cadeia de dependência" mostrando a ordem: 01→02→03→04→05→13→14→15→16
+
+**3. Breadcrumb:** Formato: 🏠 / Dashboard / Cálculo 13 — Distribuição de Carga
+
+### CADEIA DE DEPENDÊNCIA DOS CÁLCULOS
+
+```
+Cálculo 01 (Produção) ──────────────────────────────→ independente
+Cálculo 02 (Consumo Específico) ────────────────────→ independente
+Cálculo 03 (Consumo Área) ─────────────────────────→ depende de 01 + 02
+Cálculo 04 (Geração Própria) ──────────────────────→ depende de Calendário
+Cálculo 05 (Encargos ESS/EER) ────────────────────→ depende de 03 + 04
+Cálculo 13 (Distribuição Carga) ──────────────────→ depende de 03 + 04
+Cálculo 14 (Classe de Custo) ─────────────────────→ depende de 03 + 04 + 13 + Tarifas + Demanda
+Cálculo 15 (Centro de Custos) ────────────────────→ depende de 03 + 14
+Cálculo 16 (Resumo Geral) ────────────────────────→ depende de 01 + 05 + 15 + Despesas
+```
+
+### DESCRIÇÃO DETALHADA DE CADA PÁGINA
+
+---
+
+#### PÁGINA: DASHBOARD (`/`)
+
+Visão consolidada de todos os cálculos. Dados vêm da query GraphQL `calcularMotorCompleto`.
+
+**Row 1 — KPI Cards (6 cards em linha, 3 por row):**
+
+| Card | Valor | Ícone | Cor |
+|------|-------|-------|-----|
+| Consumo Total Anual | SUM(consumoAreaTotalMWh) → "X.XXX.XXX MWh" | ⚡ | accent |
+| Geração Própria Anual | SUM(geracaoTotalMWh) → "XXX.XXX MWh" | 🔋 | success |
+| Consumo Líquido (Samarco) | SUM(consumoSamarcoMWh) → "X.XXX.XXX MWh" | 📊 | warning |
+| Custo Total Encargos | SUM(mgTotal + esTotal) → "R$ XX.XXX.XXX" | 💰 | danger |
+| Custo Total Geral | SUM(resumoTotalGeral) → "R$ XXX.XXX.XXX" | 📋 | primary |
+| Custo Específico Médio | AVG(resumoCustoEspecifico) → "R$ XX,XX/tms" | 🏷️ | mg-color |
+
+Cada card com: valor principal grande, variação percentual vs mês anterior (seta ↑↓), sparkline dos 12 meses.
+
+**Row 2 — Gráficos lado a lado:**
+
+**Gráfico 1 (60% largura): Stacked Area Chart — "Consumo vs Geração (MWh/mês)"**
+- Eixo X: Jan a Dez
+- Área 1 (azul): Consumo Área Total MWh
+- Área 2 (verde): Geração Própria Total MWh
+- Área entre as duas (vermelho claro): Consumo Líquido Samarco
+- Tooltip interativo com os 3 valores
+
+**Gráfico 2 (40% largura): Donut Chart — "Distribuição por Estado"**
+- Fatia MG: SUM(consumoMG_MWh) — cor mg-color
+- Fatia ES: SUM(consumoES_MWh) — cor es-color
+- Centro: "Total\nXXX.XXX MWh"
+- Abaixo: "MG: XX.X% | ES: XX.X%"
+
+**Row 3 — Gráficos lado a lado:**
+
+**Gráfico 3 (50%): Grouped Bar Chart — "Encargos por Estado (R$/mês)"**
+- Eixo X: Jan a Dez
+- Barra MG: mgTotal[mes] — cor mg-color
+- Barra ES: esTotal[mes] — cor es-color
+- Tooltip com breakdown: EER + ESS
+
+**Gráfico 4 (50%): Line Chart — "Custo Total Mensal (R$)"**
+- Linha: resumoTotalGeral[mes]
+- Área sombreada abaixo
+- Labels com R$ formatado
+
+**Row 4 — Tabela Resumo "Visão Anual por Mês":**
+- Colunas: Métrica | Jan | Fev | ... | Dez | **Total**
+- Linhas:
+  - Consumo Total (MWh)
+  - Geração Própria (MWh)
+  - Consumo Samarco (MWh)
+  - % MG
+  - % ES
+  - Encargos EER (R$)
+  - Encargos ESS (R$)
+  - Total Encargos (R$)
+  - Custo Total Geral (R$)
+  - Custo Específico (R$/tms)
+- Formatação: MWh com 2 decimais, R$ com separador de milhares, % com 4 decimais
+- Header fixo, zebra striping
+
+---
+
+#### PÁGINA: PRODUÇÃO (`/producao`)
+
+**Dados:** `producaoTms` do JSON (192 registros = 16 áreas × 12 meses)
+
+**Header:** "Cálculo 01 — Produção (tms)" + badge "Aba 4 do Excel" + tooltip explicando a fórmula
+
+**Info Card:**
+- "Fórmula: Produção_tms = Planejamento_ktms × 1.000"
+- "16 áreas de produção × 12 meses"
+- "Multiplicador: 1.000 (ktms → tms)"
+
+**Tabela principal (estilo planilha):**
+- Colunas: Área | Jan | Fev | Mar | Abr | Mai | Jun | Jul | Ago | Set | Out | Nov | Dez | **Total**
+- 16 linhas (uma por área):
+  - Filtragem Germano (Arenoso)
+  - Beneficiamento Usina 1, 2, 3
+  - Mineroduto 1, 2, 3
+  - Preparação 1, 2
+  - Usina 1, 2, 3, 4
+  - Vendas
+  - Produção PSC + PSM
+  - Pellet Feed (embarque)
+- Linha **TOTAL** no final (bold, background accent sutil)
+- Valores formatados: XXX.XXX,XX tms
+- Scroll horizontal com coluna "Área" fixa (sticky)
+- Áreas com valor zero em cinza/muted
+
+**Gráfico abaixo:** Bar Chart horizontal — "Top 5 Áreas por Produção Anual"
+
+---
+
+#### PÁGINA: CONSUMO ESPECÍFICO (`/consumo-especifico`)
+
+**Dados:** Carregados dos inputs (CSV embutido ou input fixo). Tabela de referência — valores não calculados, apenas validados.
+
+**Header:** "Cálculo 02 — Consumo Específico (kWh/tms)" + badge "Aba 6"
+
+**Info Card:**
+- "Pass-through com validação — cópia direta do input"
+- "Estes valores representam quanto cada área consome (kWh) por tonelada produzida"
+
+**Tabela:** Mesmo layout de 16 áreas × 12 meses, valores em kWh/tms (4 decimais)
+
+**Heatmap:** Representação visual com cores (verde=baixo consumo, vermelho=alto) para identificar áreas mais energo-intensivas
+
+---
+
+#### PÁGINA: CONSUMO ÁREA (`/consumo-area`)
+
+**Dados:** `consumoAreaTotalMWh`, `consumoMG_MWh`, `consumoES_MWh`, `percentualMG`, `percentualES`
+
+**Header:** "Cálculo 03 — Consumo Área (MWh)" + badge "Aba 7" + tooltip "Depende de Cálculo 01 + 02"
+
+**Seção 1 — "Consumo por Grupo (MWh/mês)":**
+- Tabela com 7 grupos agregados:
+  - Filtragem Germano
+  - Mineração
+  - Concentração (Benef 1+2+3)
+  - Mineroduto (1+2+3)
+  - Preparação (1+2)
+  - Pelotização (Usina 1+2+3+4)
+  - Estocagem
+- Linha TOTAL
+- Stacked Bar Chart ao lado com os 7 grupos empilhados por mês
+
+**Seção 2 — "Distribuição por Estado":**
+- Duas linhas de cards:
+  - **Minas Gerais:** Valor MWh anual | % médio | Grupos: Filtragem + Mineração + Concentração + Mineroduto
+  - **Espírito Santo:** Valor MWh anual | % médio | Grupos: Preparação + Pelotização + Estocagem
+- Donut Chart MG/ES
+- Line Chart com % MG e % ES ao longo dos 12 meses (mostra variação sazonal)
+
+**Seção 3 — Tabela "Percentuais Mensais":**
+- Colunas: Estado | Jan | ... | Dez
+- Linhas: MG (MWh), ES (MWh), MG (%), ES (%)
+
+---
+
+#### PÁGINA: GERAÇÃO PRÓPRIA (`/geracao`)
+
+**Dados:** `geracaoGuilmanMWh`, `geracaoMunizFreireMWh`, `geracaoTotalMWh`, `calendario`
+
+**Header:** "Cálculo 04 — Geração Própria" + badge "Aba 9"
+
+**Seção 1 — "Calendário":**
+- Tabela visual bonita (mini-calendário):
+  - Colunas: Mês | Dias | Dias Úteis | H. Ponta | H. Fora Ponta | Total Horas
+  - 12 linhas
+  - Constantes destacadas: "Horas Ponta/Dia = 3" | "Horas/Dia = 24"
+- Mini bar chart mostrando horas ponta vs fora ponta por mês
+
+**Seção 2 — "Usinas":**
+- Dois cards lado a lado:
+  - **UHE Guilman Amorim:** Logo/ícone hidrelétrica, Total Anual MWh, sparkline 12 meses
+  - **PCH Muniz Freire:** Logo/ícone PCH, Total Anual MWh, sparkline 12 meses
+
+**Seção 3 — Tabela "Geração Mensal":**
+- Colunas: Usina | Métrica | Jan | ... | Dez | Total
+- Linhas:
+  - Guilman Amorim | MWh
+  - Guilman Amorim | MWmédios
+  - Muniz Freire | MWh
+  - Muniz Freire | MWmédios
+  - **Total** | MWh
+  - **Total** | MWmédios
+
+**Gráfico:** Stacked Area — Guilman (azul) + Muniz Freire (verde) = Total, por mês
+
+---
+
+#### PÁGINA: ENCARGOS ESS/EER (`/encargos`)
+
+**Dados:** `consumoSamarcoMWh`, `valorTotalEER`, `valorTotalESS`, `mgEER`, `mgESS`, `mgTotal`, `esEER`, `esESS`, `esTotal`
+
+**Header:** "Cálculo 05 — Encargos ESS/EER (R$)" + badge "Aba 12" + tooltip "Depende de Cálculo 03 + 04"
+
+**Info Card — Fórmulas:**
+```
+Consumo Samarco = Consumo Área Total - Geração Própria Total
+Valor EER = Consumo Samarco × (ERR + ERCAP)
+Valor ESS = ESS × Consumo Samarco
+```
+
+**Seção 1 — KPI Cards:**
+- Total EER Anual (R$) | Total ESS Anual (R$) | Total MG (R$) | Total ES (R$)
+
+**Seção 2 — "Nacional (R$/mês)":**
+- Tabela:
+  - Consumo Samarco (MWh)
+  - Valor Total EER (R$)
+  - Valor Total ESS (R$)
+  - **Total Encargos (R$)**
+
+**Seção 3 — "Por Estado":**
+- Duas sub-seções com tabs ou cards:
+
+**Minas Gerais:**
+- Tabela: EER (R$) | ESS (R$) | Total (R$) — 12 meses + total
+- Classe custo: 50610007 (EER/ERCAP) | 50610008 (ESS)
+
+**Espírito Santo:**
+- Mesma estrutura
+
+**Gráficos:**
+- Grouped Bar: MG vs ES por mês
+- Stacked Bar: EER vs ESS por mês
+- Todos valores em R$ formatado brasileiro
+
+---
+
+#### PÁGINA: DISTRIBUIÇÃO DE CARGA (`/distribuicao-carga`) *(NOVA)*
+
+**Dados:** `distribCargaNecCompraMG`, `distribCargaNecCompraES`, `distribCargaNecCompraSamarco`, `distribCargaPerdasMG`, `distribCargaPerdasES`
+
+**Header:** "Cálculo 13 — Distribuição de Carga (MWh)" + badge "Aba 13" + tooltip "Depende de Cálculo 03 + 04"
+
+**Info Card — Fórmulas:**
+```
+Perdas = Consumo × 3% (fator de perda da rede)
+Necessidade Total = Consumo + Perdas
+Necessidade de Compra MG = MAX(0, Necessidade Total MG - Geração Guilman)
+Necessidade de Compra ES = Necessidade Total ES - Geração Muniz Freire
+Necessidade Samarco = Compra MG + Compra ES
+```
+
+**Seção 1 — KPI Cards (4 em linha):**
+| Card | Valor | Cor |
+|------|-------|-----|
+| Compra Total Samarco | SUM(distribCargaNecCompraSamarco) MWh | accent |
+| Compra MG | SUM(distribCargaNecCompraMG) MWh | mg-color |
+| Compra ES | SUM(distribCargaNecCompraES) MWh | es-color |
+| Perdas Totais | SUM(perdasMG + perdasES) MWh | danger |
+
+**Seção 2 — Tabela "Balanço Energético por Estado":**
+- Colunas: Métrica | Jan | Fev | ... | Dez | Total
+- Linhas separadas por estado:
+  - **MG:** Consumo (MWh), Perdas (MWh), Necessidade Total, Geração Guilman, Necessidade Compra
+  - **ES:** Consumo (MWh), Perdas (MWh), Necessidade Total, Geração Muniz Freire, Necessidade Compra
+  - **SAMARCO:** Necessidade de Compra Total
+
+**Seção 3 — Gráficos:**
+- Stacked Bar: Compra MG + Compra ES por mês
+- Line Chart: Necessidade vs Geração por estado
+
+---
+
+#### PÁGINA: CLASSE DE CUSTO (`/classe-custo`) *(NOVA)*
+
+**Dados:** `classeCustoTusdFioMG`, `classeCustoTusdFioES`, `classeCustoEncargoMG`, `classeCustoEncargoES`, `classeCustoConsumoMG`, `classeCustoConsumoES`
+
+**Header:** "Cálculo 14 — Classe de Custo (R$)" + badge "Aba 14" + tooltip "Depende de 03 + 04 + 13 + Tarifas"
+
+**Info Card — Classes de Custo:**
+```
+50610002 — Consumo de Energia = quantidade comprada × PMIX
+50610003 — Uso de Rede (TUSD FIO) = demanda × tarifa (ponta + fora ponta)
+50610006 — Encargo (TUSD) = consumo MWh × tarifa - crédito PROINFA
+```
+
+**Seção 1 — KPI Cards:**
+| Card | Valor | Descrição |
+|------|-------|-----------|
+| Total MG | SUM(Consumo+Fio+Encargo MG) | Custo total Minas Gerais |
+| Total ES | SUM(Consumo+Fio+Encargo ES) | Custo total Espírito Santo |
+| Total Consumo Energia | SUM(ConsumoMG + ConsumoES) | Classe 50610002 |
+| Total Uso de Rede | SUM(FioMG + FioES) | Classe 50610003 |
+
+**Seção 2 — Tabela por Estado (tabs MG / ES):**
+
+**MG:**
+- Linhas: TUSD FIO (Germano + Matipó), TUSD Encargo (líquido PROINFA), Consumo Energia
+- Colunas: Jan–Dez + Total
+- Nota: "Crédito PROINFA MG = Geração Guilman × Desconto Germano"
+
+**ES:**
+- Linhas: TUSD FIO (UBU), TUSD Encargo (líquido PROINFA), Consumo Energia
+- Nota: "Crédito PROINFA ES = Geração Muniz Freire × Desconto UBU"
+
+**Seção 3 — Gráficos:**
+- Stacked Bar por classe de custo (3 segmentos) por mês
+- Grouped Bar MG vs ES
+
+---
+
+#### PÁGINA: CENTRO DE CUSTOS (`/centro-custos`) *(NOVA)*
+
+**Dados:** Derivados de classeCusto × percentuais por centro de custo (da Aba 7, rows 38-52)
+
+**Header:** "Cálculo 15 — Distribuição por Centro de Custos (R$)" + badge "Aba 15" + tooltip "Depende de 03 + 14"
+
+**Info Card:**
+```
+Valor por CC = Total da Classe (estado) × Percentual do CC
+Percentuais calculados a partir do consumo relativo de cada centro
+MG: 8 centros (Filtragem, Mineração, Benef 1-3, Mineroduto 1-3)
+ES: 7 centros (Preparação 1-2, Usina 1-4, Estocagem)
+```
+
+**Seção 1 — Tabela MG "Centro de Custos Minas Gerais":**
+- Colunas: Centro de Custo | Consumo (R$) | Uso Rede (R$) | Encargo (R$) | Total (R$)
+- 8 linhas (centros MG) + linha TOTAL
+- Valores mensais com toggle para ver mensal ou anual
+
+**Seção 2 — Tabela ES "Centro de Custos Espírito Santo":**
+- 7 linhas (centros ES) + linha TOTAL
+- Mesma estrutura
+
+**Seção 3 — Totais Samarco:**
+- Cards: Total Consumo Samarco, Total Uso Rede Samarco, Total Encargo Samarco, Total Geral
+- Treemap Chart: proporção visual de cada CC no custo total
+
+---
+
+#### PÁGINA: RESUMO GERAL (`/resumo-geral`) *(NOVA)*
+
+**Dados:** `resumoConsumo`, `resumoUsoRede`, `resumoEncargo`, `resumoEER`, `resumoESS`, `resumoTotalGeral`, `resumoProducaoTotal`, `resumoCustoEspecifico`, `resumoCustoFixo`, `resumoCustoVariavel`
+
+**Header:** "Cálculo 16 — Resumo Geral" + badge "Aba 16" + tooltip "Consolidação final de todos os custos"
+
+**Info Card:**
+```
+Custo Total = Consumo + Uso de Rede + Encargo + EER + ESS + Despesas Fixas
+Custo Específico = Custo Total / Produção Total (R$/tms)
+Custo Fixo = Uso de Rede + Despesas Fixas
+Custo Variável = Consumo + Encargo + EER + ESS
+```
+
+**Seção 1 — KPI Cards (3 grandes, destaque):**
+| Card | Valor | Descrição |
+|------|-------|-----------|
+| 💰 Custo Total Anual | SUM(resumoTotalGeral) → "R$ XXX.XXX.XXX" | Consolidação 12 meses |
+| 📦 Produção Total Anual | SUM(resumoProducaoTotal) → "XXX.XXX tms" | Pelotas + PelletFeed + PSC/PSM |
+| 📊 Custo Específico Médio | AVG(resumoCustoEspecifico) → "R$ XX,XX/tms" | Custo por tonelada |
+
+**Seção 2 — Tabela "Composição de Custos (R$/mês)":**
+- Colunas: Classe de Custo | Jan | Fev | ... | Dez | **Total Anual**
+- Linhas:
+  - 50610002 — Consumo de Energia (resumoConsumo)
+  - 50610003 — Uso de Rede (resumoUsoRede)
+  - 50610006 — Encargo TUSD (resumoEncargo)
+  - 50610007 — EER/ERCAP (resumoEER)
+  - 50610008 — ESS (resumoESS)
+  - Despesas Fixas (8 sub-linhas: Royalties ANEEL, Serviço Transmissão, Operação Hidrelétricas, Outras Desp. Hidrelétricas, O&M Rede Básica, Outras Desp. RB, Energia Administrativa, Outros Custos EE)
+  - **TOTAL GERAL** (resumoTotalGeral) — bold, destaque
+
+**Seção 3 — Tabela "Produção e Custo Específico":**
+- Linhas:
+  - Produção Pelotas (tms)
+  - Produção Pellet Feed (tms)
+  - Produção PSC + PSM (tms)
+  - **Produção Total** (resumoProducaoTotal)
+  - **Custo Específico** (resumoCustoEspecifico) — R$/tms
+
+**Seção 4 — "Análise Fixo vs Variável":**
+- Tabela: Custo Fixo (R$), Custo Fixo/tms, Custo Variável (R$), Custo Variável/tms — 12 meses
+- Stacked Bar Chart: Fixo + Variável por mês
+- Donut: % Fixo vs % Variável anual
+
+**Seção 5 — Gráficos:**
+- Line Chart: Custo Total vs Produção (eixo duplo — R$ e tms)
+- Stacked Bar: Composição de custos por mês (5 classes + despesas)
+- Area Chart: Evolução custo específico (R$/tms) ao longo do ano
+
+---
+
+#### PÁGINA: VALIDAÇÃO (`/validacao`)
+
+**Header:** "Painel de Validação — Frontend vs API" + badge com status geral (✅ ou ❌)
+
+**Conceito:** O frontend calcula os valores localmente (replicando as fórmulas do Excel) e compara com o retorno da API. Cada métrica mostra: valor frontend, valor API, diferença, status.
+
+**Layout:**
+- Tabela de validação com colunas: Cálculo | Métrica | Mês | Valor Frontend | Valor API | Diferença | Status
+- Status: 🟢 (match, diff < 0.01) | 🟡 (close, diff < 1.0) | 🔴 (diverge, diff >= 1.0)
+- Filtros: por Cálculo (01-16), por Mês, por Status
+- Resumo no topo: "X/Y métricas validadas (XX%)"
+- Progress bar visual
+
+**Dados de referência do Excel (para validação):**
+```
+Consumo Total MWh/mês: Jan=116677, Fev=114100, Mar=117104, Abr=121920, Mai=122278, Jun=124428, Jul=126421, Ago=122126, Set=123551, Out=123776, Nov=115636, Dez=119383
+Geração Total MWh/mês: Jan=37922, Fev=33560, Mar=37628, Abr=34096, Mai=34323, Jun=25437, Jul=22311, Ago=21151, Set=20337, Out=22329, Nov=28136, Dez=34939
+Consumo Samarco MWh: Jan=78755, Fev=80539, Mar=79476, Abr=87824, Mai=87955, Jun=98992, Jul=104110, Ago=100975, Set=103213, Out=101447, Nov=87500, Dez=84444
+```
+
+---
+
+### API GRAPHQL — QUERY COMPLETA
+
+O backend expõe UMA query que retorna tudo:
+
+```graphql
+query {
+  calcularMotorCompleto {
+    # Cálculo 01 — Produção (tms)
+    producaoTms { area mes valor }
+
+    # Cálculo 03 — Consumo Área (MWh)
+    consumoAreaTotalMWh { mes valor }
+    consumoMG_MWh { mes valor }
+    consumoES_MWh { mes valor }
+    percentualMG { mes valor }
+    percentualES { mes valor }
+
+    # Cálculo 04 — Geração Própria
+    geracaoGuilmanMWh { mes valor }
+    geracaoMunizFreireMWh { mes valor }
+    geracaoTotalMWh { mes valor }
+    calendario { mes diasNoMes diasUteis horasPonta horasForaPonta totalHoras }
+
+    # Cálculo 05 — Encargos ESS/EER (R$)
+    consumoSamarcoMWh { mes valor }
+    valorTotalEER { mes valor }
+    valorTotalESS { mes valor }
+    mgEER { mes valor }
+    mgESS { mes valor }
+    mgTotal { mes valor }
+    esEER { mes valor }
+    esESS { mes valor }
+    esTotal { mes valor }
+
+    # Cálculo 13 — Distribuição de Carga (MWh)
+    distribCargaNecCompraMG { mes valor }
+    distribCargaNecCompraES { mes valor }
+    distribCargaNecCompraSamarco { mes valor }
+    distribCargaPerdasMG { mes valor }
+    distribCargaPerdasES { mes valor }
+
+    # Cálculo 14 — Classe de Custo (R$)
+    classeCustoTusdFioMG { mes valor }
+    classeCustoTusdFioES { mes valor }
+    classeCustoEncargoMG { mes valor }
+    classeCustoEncargoES { mes valor }
+    classeCustoConsumoMG { mes valor }
+    classeCustoConsumoES { mes valor }
+
+    # Cálculo 16 — Resumo Geral (R$)
+    resumoConsumo { mes valor }
+    resumoUsoRede { mes valor }
+    resumoEncargo { mes valor }
+    resumoEER { mes valor }
+    resumoESS { mes valor }
+    resumoTotalGeral { mes valor }
+    resumoProducaoTotal { mes valor }
+    resumoCustoEspecifico { mes valor }
+    resumoCustoFixo { mes valor }
+    resumoCustoVariavel { mes valor }
+  }
+}
+```
+
+**Tipos de retorno:**
+- `MesValue`: `{ mes: String, valor: Float }` — 12 itens (Jan-Dez)
+- `AreaMesValue`: `{ area: String, mes: String, valor: Float }` — 192 itens (16 áreas × 12 meses)
+- `CalendarioMesResponse`: `{ mes: String, diasNoMes: Int, diasUteis: Int, horasPonta: Float, horasForaPonta: Float, totalHoras: Float }`
+
+**curl de teste (query completa):**
+```bash
+curl -s http://localhost:8080/graphql \
+  -H "Content-Type: application/json" \
+  -d '{"query": "{ calcularMotorCompleto { consumoAreaTotalMWh { mes valor } geracaoTotalMWh { mes valor } consumoSamarcoMWh { mes valor } mgTotal { mes valor } esTotal { mes valor } distribCargaNecCompraSamarco { mes valor } classeCustoConsumoMG { mes valor } resumoTotalGeral { mes valor } resumoCustoEspecifico { mes valor } } }"}' | python3 -m json.tool
+```
+
+Não precisa autenticação — o endpoint é público nesta versão.
+
+---
+
+### COMPONENTES REUTILIZÁVEIS
+
+1. **`<DataTable>`** — Tabela estilo planilha: header fixo, coluna "Área/Métrica" sticky, zebra striping, scroll horizontal, linha TOTAL bold, formatação numérica configurável (MWh, R$, %, tms)
+2. **`<KpiCard>`** — Card de métrica com: ícone, valor principal grande, subtítulo, sparkline 12 meses, cor customizável
+3. **`<DonutChart>`** — Gráfico rosca com valor central, tooltip, legenda
+4. **`<StackedBarChart>`** — Barras empilhadas, tooltips interativos, valores acima das barras
+5. **`<AreaChart>`** — Área chart para consumo vs geração
+6. **`<ValidationRow>`** — Linha de validação: frontend vs API, diff, status colorido
+7. **`<DependencyBadge>`** — Badge mostrando dependências do cálculo (ex: "Depende de 01 + 02")
+8. **`<FormulaCard>`** — Card com a fórmula do cálculo e referência Excel
+9. **`<TreemapChart>`** — Treemap para visualizar proporções de centros de custo *(NOVO)*
+10. **`<DualAxisChart>`** — Gráfico com dois eixos Y (R$ + tms/MWh) *(NOVO)*
+
+### REQUISITOS DE UX/UI
+
+- **Animações:** Transições suaves (0.2s ease), fade-in ao carregar, skeleton loaders
+- **Responsividade:** Mobile-first, breakpoints 768px e 1200px
+- **Formatação monetária:** R$ xxx.xxx.xxx,xx (padrão brasileiro)
+- **Formatação MWh:** xxx.xxx,xx MWh
+- **Formatação percentual:** xx,xxxx%
+- **Loading states:** Skeleton loaders nas tabelas e gráficos
+- **Empty states:** Mensagem quando API offline
+- **Error handling:** Toast notifications
+- **Dark theme consistente:** Nunca usar backgrounds brancos
+- **Glassmorphism:** Cards com backdrop-blur, bordas accent sutis
+- **Cadeia de dependência visual:** Em cada página, mostrar de onde vêm os dados e para onde vão
+
+### ESTRUTURA DE PASTAS
+
+```
+src/
+├── assets/              (logo SVG Samarco)
+├── components/
+│   ├── charts/          (DonutChart, StackedBar, AreaChart, TreemapChart, DualAxisChart)
+│   ├── layout/          (Header, Sidebar, Breadcrumb)
+│   ├── tables/          (DataTable, ValidationTable)
+│   └── ui/              (KpiCard, FormulaCard, DependencyBadge, StatusIndicator)
+├── graphql/
+│   └── queries.ts       (CALCULAR_MOTOR_COMPLETO)
+├── hooks/
+│   └── useMotorCalculo.ts
+├── pages/
+│   ├── Dashboard/
+│   ├── Producao/
+│   ├── ConsumoEspecifico/
+│   ├── ConsumoArea/
+│   ├── Geracao/
+│   ├── Encargos/
+│   ├── DistribuicaoCarga/    *(NOVO)*
+│   ├── ClasseCusto/          *(NOVO)*
+│   ├── CentroCustos/         *(NOVO)*
+│   ├── ResumoGeral/          *(NOVO)*
+│   └── Validacao/
+├── services/
+│   └── apolloClient.ts
+├── styles/
+│   └── theme.ts         (tokens do design system)
+├── types/
+│   └── motorCalculo.ts  (interfaces TypeScript)
+├── utils/
+│   └── formatters.ts    (formatBRL, formatMWh, formatPercent)
+├── App.tsx
+└── main.tsx
+```
+
+### OBSERVAÇÕES IMPORTANTES
+
+1. **Uma única query GraphQL** retorna TODOS os dados — faça a chamada uma vez e distribua para as páginas via Context ou state management
+2. O arquivo `jsonParaComparacao.json` anexo tem o retorno real da API — use como mock enquanto desenvolve sem o backend rodando
+3. **Tabelas são o core** — devem ser bonitas e fáceis de ler com muitos números. Inspiração: planilha Excel mas com visual premium
+4. **Cadeia de dependência** é importante visualmente — o usuário precisa entender que os 10 cálculos se encadeiam na ordem 01→02→03→04→05→13→14→15→16
+5. Valores devem bater 100% com o Excel — a página de Validação é a prova disso
+6. O backend roda em `http://localhost:8080` — configurar o Apollo Client com essa URL
+7. **Cálculo 16 (Resumo Geral) é a página mais importante** — é a consolidação final que os gestores vão usar para tomada de decisão. Dê atenção especial ao design desta página
+8. As 5 classes de custo (50610002-50610008) são o eixo central da visualização financeira

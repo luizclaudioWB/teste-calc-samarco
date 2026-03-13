@@ -1,0 +1,6 @@
+target/
+.git/
+*.xlsx
+samarco_extracted.txt
+doc/
+node_modules/
